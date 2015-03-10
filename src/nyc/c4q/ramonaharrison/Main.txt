@@ -45,4 +45,6 @@ public class Main {
     }
 
 }
-
+" This is a string "
+trim()
+== "This is a string"
