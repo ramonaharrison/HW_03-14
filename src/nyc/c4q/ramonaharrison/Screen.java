@@ -59,13 +59,29 @@ public class Screen {
                 "                          ☆                                                            ☆              \n" +
                 "                                                                          •ི   •ྀ     - beep beep       \n" +
                 "                                                                        (⊙ ﹏ ⊙ ✿)                    \n" +
-                "                                                                         ૮[     ]ა                    \n" +
+                "                                                                         ૮[ ♡   ]ა                    \n" +
                 "y o u    a r e    l o s t    i n    t h e    u n i v e r s e              ~~~~~~                      \n" +
                 "                                                                           ミ ミ                       \n" +
                 "            ☆                                                        ☆                        ˳✧༚     \n" +
                 ".✧                                                                                                    \n" +
                 "                          ☆                                                            ☆              \n" +
                 "                                                                                                      \n");
+    }
+
+    public static String help() {
+        return("help screen");
+    }
+
+    public static String map() {
+        return("map screen");
+    }
+
+    public static String inventory() {
+        return("inventory screen");
+    }
+
+    public static String manual() {
+        return("manual screen");
     }
 
 }
