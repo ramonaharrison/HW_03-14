@@ -21,11 +21,12 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String startPrompt;
 
+        // title screen
         System.out.println(Screen.title());
         System.out.println(Screen.byline());
         System.out.println("'start' to begin");
 
-
+        // game loop
         while(true) {
 
             startPrompt = input.next();
@@ -67,13 +68,13 @@ public class Main {
                 boolean panelFixed = false;
 
 
-                // The following block is adapted from Alex's code in the Roman Numeral Calculator.java class
+                // the following block for dealing with IOExceptions is adapted from Alex's code in the Roman Numeral Calculator.java class
                 final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                // Loop forever.
+                // loop forever
                 while (!panelFixed) {
-                    // Show the prompt.
+                    // show the prompt
                     System.out.print("> ");
-                    // Read a line of input.
+                    // read a line of input
                     final String line = reader.readLine();
                     if (line.equalsIgnoreCase("help")) {
                         System.out.println(Screen.help());
@@ -101,7 +102,7 @@ public class Main {
                         }
                         System.out.println("\n");
                     } else {
-                        // Scans user input into three parts: verb, preposition, and noun.
+                        // scans user input into three parts: verb, preposition, and noun
                         final Scanner scanner = new Scanner(line);
                         final String verb, preposition, noun;
                         try {
@@ -113,7 +114,9 @@ public class Main {
                             continue;
                         }
 
+
                         // interprets user input
+                        // TODO: i wish i could isolate this whole section in its own method, but i'm having a hard time tracking inventory when i try to do it that way
                         if (verb.equalsIgnoreCase("pick")) { // deals with picking up objects
 
                             if (noun.equalsIgnoreCase("flowers") && isFlowers == true && hasFlowers == false) {
@@ -205,7 +208,7 @@ public class Main {
 
                         } else if (verb.equalsIgnoreCase("use")) { // deals with using objects
                             if (noun.equalsIgnoreCase("arrowhead") || noun.equalsIgnoreCase("screwdriver") || noun.equalsIgnoreCase("motherboard")) {
-                                System.out.print("\nuse the " + noun + " on (enter an object)>");
+                                System.out.print("\nuse the " + noun + " on (enter an object) >");
                                 final Scanner use = new Scanner(System.in);
                                 final String useOn;
                                 try {
@@ -228,12 +231,14 @@ public class Main {
                                         }
                                     }
 
-                                    System.out.println("\n\n\n\n\n\n\n\n\n\nsuddenly your spaceship comes to life!\n");
+                                    // spaceship scene
+                                    System.out.println(Screen.clearScreen());
+                                    System.out.println("suddenly your spaceship comes to life!\n");
                                     System.out.println(Screen.spaceShip());
                                     System.out.println("you climb inside and program the coordinates for your home star into the navigation system.\n");
                                     System.out.println("are you ready to go home?\n");
 
-                                    // Waits for user input to continue
+                                    // Waits for user input to continue         // these are repetitive. i should just call a "wait for 'y' method" but... i'm... so... sleepy....
                                     boolean enter2 = false;
                                     System.out.println("'y' to continue>");
                                     while(!enter2) {
@@ -255,14 +260,13 @@ public class Main {
                                         }
                                     }
 
-                                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n"); // i should just write a method for generating all these new lines but... i'm... so... sleepy....
+                                    // end screen
+                                    System.out.println(Screen.clearScreen());
                                     System.out.println(Screen.heart());
                                     System.out.println(Screen.theEnd());
                                     System.out.println("\n\n\n\n\n\n");
 
-
-
-                                } else if (noun.equalsIgnoreCase("screwdriver") && hasScrewdriver && hasAndroidPhone && useOn.equalsIgnoreCase("android phone")) {
+                                } else if (noun.equalsIgnoreCase("screwdriver") && hasScrewdriver && hasAndroidPhone && (useOn.equalsIgnoreCase("android phone") || useOn.equalsIgnoreCase("android") || useOn.equalsIgnoreCase("phone"))) {
                                     System.out.println("\nyou use the screwdriver to remove the back cover of the android phone.\n\ninside is a small green motherboard. its not unlike the circuit board in your spaceship!\n\nyou discard the phone case and place the motherboard in your pocket.\n");
                                     hasAndroidPhone = false;
                                     hasMotherboard = true;
@@ -279,25 +283,26 @@ public class Main {
                         }
                     }
                 }
-
-
-
-
             }
         }
     }
 
+
+
     public static void starScroll(int length, String scene) {
 
-        // generates random star scroll
+        // my favorite part: generates random star scroll
 
         Random random = new Random();
         String starLine = "";
         int starSpacing = 80;                       // increasing this value decreases the concentration of stars
 
         for (int i = 0; i < length; i++) {
+
             for (int j = 0; j < 220; j++) {         // widens the scroll
+
                 int number = random.nextInt(starSpacing);
+
                 if (number < 3) {
                     starLine = starLine + "☆";
                 } else if (number == 3) {
@@ -310,8 +315,8 @@ public class Main {
                     starLine = starLine + " ";
                 }
             }
+
             if (i == (length - 20)) {                   // determines position of scene in scroll
-                // places scene
                 System.out.println(scene);
             } else {
                 System.out.println(starLine);

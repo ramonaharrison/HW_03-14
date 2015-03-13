@@ -7,17 +7,16 @@ package nyc.c4q.ramonaharrison;
  * This class contains Acsii backgrounds, images, and generators
  */
 
-import java.util.Random;
 
 public class Screen {
 
-    // This function returns enough blank lines to clear the console
+    // this function returns enough blank lines to clear the console
 
     public static String clearScreen() {
 
         String blank = "";
 
-        for (int i = 0; i < 50; ++i) {
+        for (int i = 0; i < 50; i++) {
             blank = blank + "\n";
         }
 
@@ -25,7 +24,7 @@ public class Screen {
     }
 
 
-    // Title art
+    // title art
 
     public static String title() {
 
@@ -48,7 +47,7 @@ public class Screen {
                 "     _/              /                                          \n\n\n");
     }
 
-    // The following functions return scene art
+    // scene art
 
     public static String firstScene() {
 
@@ -167,7 +166,7 @@ public class Screen {
                 "           a;sdfghja;sdfghja;sdfghja;sdfghja;sdf\n" +
                 "              qmprootiqmprootimprootqimproot\n" +
                 "                 mtu1qaz@mtu1qa@mtuz1qa@m             •ི   •ྀ           \n" +
-                "                    !qwe$rty!qwe$rty!q               (◕ ‿ ◕ ✿)        \n" +
+                "                    !qwe$rty!qwe$rty!q            -  (◕ ‿ ◕ ✿)        \n" +
                 "                       -p=oiuyt-p=o                   ૮[ ♡   ]ა        \n" +
                 "                           asdfg                       ~~~~~~          \n" +
                 "                             l                          ミ ミ           \n");
