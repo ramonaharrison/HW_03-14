@@ -1,2 +1,2 @@
-### Stars
-##### a celestial text based adventure game
+## Stars
+#### a celestial text based adventure game
