@@ -44,20 +44,19 @@ public class Main {
                     }
                 }
 
-                System.out.println("\n\non the way home from a long interstellar journey, you've crash landed on the planet earth.\n\nyour spaceship appears to be in alright condition, but the landing jostled the circuitry and destroyed its fragile motherboard.\n\nwithout this important system, your spaceship will not fly.\n\nyou look around and see nothing but desert.\n\na desolate highway stretches into the distance towards an old gas station.\n\nin the other direction, a rocky outcrop rises to a vantage point.\n\nhow will you fix your spaceship and return home?\n");
-
                 // start of user play
-                // location:
+                System.out.println("\n\non the way home from a long interstellar journey, you've crash landed on the planet earth.\n\nyour spaceship appears to be in alright condition, but the landing jostled the circuitry and destroyed its fragile motherboard.\n\nwithout this important system, your spaceship will not fly.\n\nyou look around and see nothing but desert.\n\na desolate highway stretches into the distance towards an old gas station.\n\nin the other direction, a rocky outcrop rises to a vantage point.\n\nhow will you fix your spaceship and return home?\n");
+                // location
                 String location = "spaceship";
 
-                // inventory:
+                // inventory
                 boolean hasFlowers = false;
                 boolean hasArrowhead = false;
                 boolean hasScrewdriver = false;
                 boolean hasAndroidPhone = false;
                 boolean hasMotherboard = false;
 
-                // in scene:
+                // in scene
                 boolean isFlowers = false;
                 boolean isArrowhead = false;
                 boolean isScrewdriver = false;
