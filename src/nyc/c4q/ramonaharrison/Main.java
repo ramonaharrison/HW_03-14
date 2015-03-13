@@ -311,7 +311,7 @@ public class Main {
                 }
             }
             if (i == (length - 20)) {                   // determines position of scene in scroll
-                // First intro scene
+                // places scene
                 System.out.println(scene);
             } else {
                 System.out.println(starLine);
