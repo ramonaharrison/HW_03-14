@@ -1,7 +1,7 @@
 ## Stars
-#### a celestial text based adventure game
+#### a celestial text-based adventure game
 
-you've crash landed on the planet earth. figure out how to get your spaceship running so you can go home!
+you've crash landed on planet earth. figure out how to get your spaceship running so you can return home!
 
 #####commands:
 
