@@ -24,7 +24,7 @@ public class Main {
         // title screen
         System.out.println(Screen.title());
         System.out.println(Screen.byline());
-        System.out.println("'start' to begin");
+        System.out.println("'start' to begin >");
 
         // game loop
         while(true) {
@@ -36,7 +36,7 @@ public class Main {
 
                 // Waits for user input to continue
                 boolean enter = false;
-                System.out.println("'y' to continue>");
+                System.out.println("'y' to continue >");
                 while(!enter) {
                     String prompt = input.next();
                     if (prompt.equals("y")) {
@@ -45,7 +45,8 @@ public class Main {
                 }
 
                 // start of user play
-                System.out.println("\n\non the way home from a long interstellar journey, you've crash landed on the planet earth.\n\nyour spaceship appears to be in alright condition, but the landing jostled the circuitry and destroyed its fragile motherboard.\n\nwithout this important system, your spaceship will not fly.\n\nyou look around and see nothing but desert.\n\na desolate highway stretches into the distance towards an old gas station.\n\nin the other direction, a rocky outcrop rises to a vantage point.\n\nhow will you fix your spaceship and return home?\n");
+                System.out.println(Screen.clearScreen());
+                System.out.println("\n\non the way home from a long interstellar journey, you've crash landed on the planet earth.\n\nyour spaceship appears to be in alright condition, but the landing jostled its circuitry and destroyed the fragile motherboard.\n\nwithout this important system, your spaceship will not fly.\n\nyou look around and see nothing but desert.\n\na desolate highway stretches into the distance towards an old gas station.\n\nin the other direction, a rocky outcrop rises to a vantage point.\n\nhow will you fix your spaceship and return home?\n");
                 // location
                 String location = "spaceship";
 
@@ -222,7 +223,7 @@ public class Main {
 
                                     // Waits for user input to continue
                                     boolean enter4 = false;
-                                    System.out.println("'y' to continue>");
+                                    System.out.println("'y' to continue >");
                                     while(!enter4) {
                                         String prompt = input.next();
                                         if (prompt.equals("y")) {
@@ -239,7 +240,7 @@ public class Main {
 
                                     // Waits for user input to continue         // these are repetitive. i should just call a "wait for 'y' method" but... i'm... so... sleepy....
                                     boolean enter2 = false;
-                                    System.out.println("'y' to continue>");
+                                    System.out.println("'y' to continue >");
                                     while(!enter2) {
                                         String prompt = input.next();
                                         if (prompt.equals("y")) {
@@ -251,7 +252,7 @@ public class Main {
 
                                     // Waits for user input to continue
                                     boolean enter3 = false;
-                                    System.out.println("'y' to continue>");
+                                    System.out.println("'y' to continue >");
                                     while(!enter3) {
                                         String prompt = input.next();
                                         if (prompt.equals("y")) {
